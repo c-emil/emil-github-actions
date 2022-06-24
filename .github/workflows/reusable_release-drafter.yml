@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: "Testing context"
         run: |
-          echo "${{ fromJSON(github.event) }}"
+          echo "${{ toJSON(github.event) }}"
           echo "-------------------"
-          echo "${{ fromJSON(github.event.pull_request) }}"
+          echo "${{ toJSON(github.event.pull_request) }}"
   # get_pr:
   #   runs-on: ubuntu-latest
   #   outputs:
