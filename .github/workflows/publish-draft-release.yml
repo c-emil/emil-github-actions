@@ -7,5 +7,5 @@ on: workflow_dispatch
 # will not bump the version in package.json file before the release is published and tag is created.
 jobs:
   bump_version_and_publish:
-    uses: .github/workflows/reusable_publish-draft-release.yml
+    uses: ./.github/workflows/reusable_publish-draft-release.yml
     secrets: inherit

@@ -9,4 +9,4 @@ on:
 
 jobs:
   release-drafter:
-    uses: .github/workflows/reusable_release-drafter.yml
+    uses: ./.github/workflows/reusable_release-drafter.yml
