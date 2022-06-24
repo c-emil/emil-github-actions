@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo '${{ toJSON(github.event) }}'
+        echo "${{ fromJSON(github.event) }}"
         echo "-------------------"
-        echo '${{ toJSON(github.event.pull_request) }}'
+        echo "${{ fromJSON(github.event.pull_request) }}"
   # get_pr:
   #   runs-on: ubuntu-latest
   #   outputs:
