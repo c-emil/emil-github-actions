@@ -6,10 +6,11 @@ jobs:
   test_context:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "${{ fromJSON(github.event) }}"
-        echo "-------------------"
-        echo "${{ fromJSON(github.event.pull_request) }}"
+      - name: "Testing context"
+        run: |
+          echo "${{ fromJSON(github.event) }}"
+          echo "-------------------"
+          echo "${{ fromJSON(github.event.pull_request) }}"
   # get_pr:
   #   runs-on: ubuntu-latest
   #   outputs:
