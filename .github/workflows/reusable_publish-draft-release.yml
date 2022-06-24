@@ -1,6 +1,16 @@
 name: "Reusable: Bump version and release the draft release"
 
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      git_user_name:
+        required: false
+        default: 'github-actions'
+        type: string
+      git_user_email:
+        required: false
+        default: 'info@mindojo.com'
+        type: string
 
 jobs:
   bump_version_and_publish:
@@ -23,8 +33,8 @@ jobs:
           yarn version --no-git-tag-version --no-commit-hooks --new-version ${{ steps.last_release.outputs.tag_name }}
       - name: Commit files
         run: |
-          git config --local user.email "info@mindojo.com"
-          git config --local user.name "github-actions"
+          git config --local user.email "${{ inputs.git_user_email }}"
+          git config --local user.name "${{ inputs.git_user_name }}"
           git commit -m "Bumped version to ${{ steps.last_release.outputs.tag_name }}" -a
       - name: Push changes
         uses: ad-m/github-push-action@master
