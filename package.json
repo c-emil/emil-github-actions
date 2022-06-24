@@ -1,0 +1,18 @@
+{
+  "name": "emil-github-actions",
+  "version": "1.0.0",
+  "description": "Reusable workflows & actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-emil/emil-github-actions.git"
+  },
+  "author": "Mindojo",
+  "bugs": {
+    "url": "https://github.com/c-emil/emil-github-actions/issues"
+  },
+  "homepage": "https://github.com/c-emil/emil-github-actions#readme"
+}
