@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Test output
         run: |
-          echo "${{ toJSON(github.event.pull_request.labels) }}"
+          echo "${{ contains(github.event.pull_request.labels.*.name, 'feature') }}"
       # - name: Checkout 🛎️
       #   uses: actions/checkout@v2
       #   with:
